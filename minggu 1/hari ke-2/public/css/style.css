@@ -1,0 +1,146 @@
+/* body {
+    background-image: url('../img/pattern.jpg');
+    font-family: sans-serif;
+}
+
+
+header {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    position: fixed;
+}
+
+nav {
+    margin-left: auto;
+}
+
+header img {
+    display: inline-block;
+}
+
+
+ul li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+ul {
+    float: right;
+}
+
+section {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    width: 1100px;
+    position: relative;
+    border-top: 300px;
+    margin-top: 70px;
+}
+
+section h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+article {
+    text-align: justify;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    width: 1000px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    height: 50px;
+}
+
+footer h5 {
+    position: relative;
+    background: #000;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+} */
+
+body {
+    background-image: url('../img/pattern.jpg');
+    font-family: sans-serif;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    top: 0%;
+    display: flex;
+    position: fixed;
+}
+
+img {
+    float: left;
+    position: absolute;
+}
+
+nav {
+    margin-left: auto;
+}
+
+ul {
+    display: inline-block;
+}
+
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+.content {
+    background-color: white;
+    width: 1000px;
+    margin: auto;
+}
+
+#article-list {
+    text-align: justify;
+}
+
+article {
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: black;
+    height: 50px;
+}
+
+footer h5 {
+    position: relative;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
