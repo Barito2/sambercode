@@ -1,0 +1,56 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+#header {
+    background-color: black;
+    color: white;
+}
+
+#header li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#header ul {
+    float: right;
+}
+
+#header a {
+    float: left;
+}
+
+#header li form {
+    margin-left: 10px;
+}
+
+.justify-content-center {
+    text-align: center;
+    background-color: wheat;
+    width: 100%;
+    font-size: 20px;
+}
+
+.justify-content-center li {
+    padding-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img-thumnail {
+    height: 550px;
+    width: 1240px;
+}
+
+.card {
+    margin-left: 50px;
+}
+
+.external {
+    height: 200px;
+}
