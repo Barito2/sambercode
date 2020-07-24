@@ -16,9 +16,9 @@
 
     </div>
     <h3>Soal No. 1</h3>
-    <div id="jawaban1">
+    <div id="jawaban11"></div>
+    <div id="jawaban12"></div>
 
-    </div>
     <h3>Soal No. 2</h3>
     <div id="jawaban2"></div>
 
@@ -67,25 +67,28 @@
 
         var jawaban1 = ""
         // Code kamu di sini, lakukan looping dengan while
-
+        jawaban11 = "LOOPING PERTAMA<BR>"
         i = 1
         while (i < 20) {
             if (i % 2 == 0) {
-                jawaban1 += i + " - I will become web developer<br>"
+                jawaban11 += i + " - I will become web developer<br>"
             }
             i++
         }
+        document.getElementById("jawaban11").innerHTML = jawaban11
 
+        var jawaban12 = ""
+        jawaban12 = "<BR>LOOPING KEDUA<BR>"
         i = 20;
         while (i > 0) {
             if (i % 2 == 0) {
-                jawaban1 += i + " - I will become web developer<br>"
+                jawaban12 += i + " - I will become web developer<br>"
             }
             i--
         }
 
         // Driver Code, Jangan diganggu !
-        document.getElementById("jawaban1").innerHTML = jawaban1
+        document.getElementById("jawaban12").innerHTML = jawaban12
 
 
         // Soal No. 2
