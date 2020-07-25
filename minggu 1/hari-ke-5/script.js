@@ -17,18 +17,18 @@ var items = [
   ["004", "Mouse Jerry", 30000, "Mouse yang disukai kucing", "jerry.jpg"],
 ];
 
-function dataItems() {
+function printItems(array) {
   data = "";
 
-  for (var i = 0; i < items.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     data += `
         <div class = "col-sm-4 mt-5">
             <div class = "card" style = "width: 18rem;">
-            <img src = "img/${items[i][4]}"class = "card-img-top" alt = "...">
+            <img src = "img/${array[i][4]}"class = "card-img-top" alt = "...">
                 <div class = "card-body">
-                    <h5 class = "card-title" id = "itemName"> ${items[i][1]} </h5>
-                    <p class = "card-text"id = "itemDesc"> ${items[i][3]} </p>
-                    <p class = "card-text"> Rp. ${items[i][2]} </p>
+                    <h5 class = "card-title" id = "itemName"> ${array[i][1]} </h5>
+                    <p class = "card-text"id = "itemDesc"> ${array[i][3]} </p>
+                    <p class = "card-text"> Rp. ${array[i][2]} </p>
                     <a href = "#"class = "btn btn-primary" id = "addCart"> Tambahkan ke keranjang </a>
                 </div>
             </div>
@@ -38,21 +38,28 @@ function dataItems() {
   return data;
 }
 
-function search(keyword) {
-  // data = []
+document.getElementById("listBarang").innerHTML = printItems(items);
 
-  // for (var i = 0; i < items.length; i++) {
-  //     if (items.includes(keyword) > 0) {
-  //         data += items[i]
-  //     }
-  // }
-  // return data
-  console.log(keyword);
+var formSearch = document.getElementById("formItem");
+formSearch.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  var keyword = document.getElementById("keyword").value;
+
+  filteringItems = filtering(keyword);
+  document.getElementById("listBarang").innerHTML = printItems(filteringItems);
+});
+
+function filtering(string) {
+  var filteringItems = [];
+
+  for (j = 0; j < items.length; j++) {
+    var itemNameToLowerCase = items[j][1].toLowerCase();
+    var stringToLoweCase = string.toLowerCase();
+
+    if (itemNameToLowerCase.includes(stringToLoweCase)) {
+      filteringItems.push(items[j]);
+    }
+  }
+  return filteringItems;
 }
-
-document.getElementById("listBarang").innerHTML = dataItems();
-
-const keyword = document.getElementById("keyword").value;
-const buttom = document
-  .getElementById("searchItem")
-  .addEventListener("click", search(keyword));
