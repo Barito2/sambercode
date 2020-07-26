@@ -66,18 +66,16 @@
 
         var jawaban1 = ""
         // Code kamu di sini, lakukan looping dengan while
-        jawaban1 = "LOOPING PERTAMA<BR>"
-        i = 1
+        jawaban1 += "LOOPING PERTAMA<BR>"
+        i = 2
         while (i <= 20) {
-            jawaban1 += i + " - I will become web developer<br>"
+            jawaban1 += i + " - I love codingr<br>"
             i += 2
         }
-        document.getElementById("jawaban1").innerHTML = jawaban1
 
-        var jawaban1 = ""
-        jawaban1 = "<BR>LOOPING KEDUA<BR>"
+        jawaban1 += "<BR>LOOPING KEDUA<BR>"
         j = 20;
-        while (j > 0) {
+        while (j >= 2) {
             jawaban1 += j + " - I will become web developer<br>"
             j -= 2
         }
@@ -121,11 +119,12 @@
         var jawaban2 = ""
         // Code kamu di sini, lakukan looping dengan syntax for
         for (var i = 1; i <= 20; i++) {
-            if (i % 3 == 0 && i % 2 == 1) {
-                jawaban2 += i + " - I love coding<br>"
-            } else if (i % 2 == 0) {
+            if (i % 2 == 0) {
                 jawaban2 += i + " - berkualitas<br>"
             } else if (i % 2 == 1) {
+                if (i % 3 == 0) {
+                    jawaban2 += i + " - I love coding<br>"
+                }
                 jawaban2 += i + " - Santai<br>"
             }
         }
