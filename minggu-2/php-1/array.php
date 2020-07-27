@@ -76,7 +76,7 @@
             Status: "Alive"
             
         */
-        game = [
+        $game = [
             [
                 "Name" => "Will Byers",
                 "Age" => 12,
