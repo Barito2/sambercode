@@ -99,15 +99,41 @@
         
         // Output: 
 
-        for($l = 0; $l < count($items); $l++){
-            $ArrayAsos[] = [
-                "id" => $items[$l][0],
-                "name" => $items[$l][1],
-                "price" => $items[$l][2],
-                "description" => $items[$l][3],
-                "source" => $items[$l][4],
-            ];
-        }
+        $arrayAssos = [
+            [
+                "id" => "001",
+                "name" => "Keyboard Logitek",
+                "price" => 60000,
+                "description" => "Keyboard yang mantap untuk kantoran",
+                "source" => "logitek.jpeg",
+            ],
+            [
+                "id" => "002",
+                "name" => "Keyboard MSI",
+                "price" => 300000,
+                "description" => "Keyboard gaming MSI mekanik",
+                "source" => "msi.jpeg",
+            ],
+            [
+                "id" => "003",
+                "name" => "Mouse Genius",
+                "price" => 50000,
+                "description" => "Mouse Genius biar lebih pinter",
+                "source" => "genius.jpeg",
+            ],
+            [
+                "id" => "004",
+                "name" => "Mouse Jerry",
+                "price" => 30000,
+                "description" => "Mouse yang disukai kucing",
+                "source" => "jerry.jpeg",
+            ],
+        ];
+
+    for ($l = 0; $l < count($arrayAssos); $l++) {
+        print_r($arrayAssos[$l]);
+        echo "<br>";
+    }
 
         print_r($ArrayAsos);
         
