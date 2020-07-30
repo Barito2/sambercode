@@ -2,6 +2,51 @@
 function skor_terbesar($arr)
 {
     //kode di sini
+    $result = [];
+    $kelasReactNative = [];
+    $kelasReactJS = [];
+    $kelasLaravel = [];
+
+    foreach ($arr as $key => $row) {
+      # code...
+      $nilai[$key] = $row['nilai'];
+      $kelas[$key] = $row['kelas'];
+    }
+
+    array_multisort($kelas,SORT_DESC, $nilai,SORT_DESC,$arr);
+
+    for ($i=0; $i < count($arr); $i++) { 
+      # code...
+      if ($arr[$i]['kelas'] =='React Native') {
+        # code...
+        $kelasReactNative[] = $arr[$i];
+      }elseif ($arr[$i]['kelas'] =='React JS') {
+        # code...
+        $kelasReactJS[] = $arr[$i];
+      }else{
+        $kelasLaravel[] = $arr[$i];
+      }
+    }
+
+    echo "<pre>";
+    print_r($kelasReactNative);
+    echo "</pre>";
+    echo "<pre>";
+    print_r($kelasReactJS);
+    echo "</pre>";
+    echo "<pre>";
+    print_r($kelasLaravel);
+    echo "</pre>";
+ 
+
+    $result[] = $kelasReactNative[0];
+    $result[] = $kelasReactJS[0];
+    $result[] = $kelasLaravel[0];
+
+    foreach ($result as $key => $hasil) {
+      # code...
+      echo "Sekor terbesar dari ".$hasil['kelas']." diperoleh oleh ".$hasil['nama']."dengan skor sebesar : ".$hasil['nilai']."<br>";
+    }
 }
 
 // TEST CASES
