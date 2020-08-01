@@ -1,0 +1,22 @@
+CREATE TABLE users(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255),
+    email varchar(255),
+    password varchar(255)
+);
+
+CREATE TABLE categories(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255)
+);
+
+CREATE TABLE items(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+ 	name varchar(255),
+    description varchar(255),
+    price int,
+    stock int,
+    category_id int
+);
+
+ALTER TABLE items ADD FOREIGN KEY (category_id) REFERENCES categories(id);

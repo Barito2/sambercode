@@ -1,0 +1,6 @@
+a. SELECT name, email FROM users
+
+b1. SELECT * FROM items WHERE price > 1000000
+b2. SELECT * FROM items WHERE name LIKE '%uniklo%'
+
+c. SELECT items.*, categories.name as kategori FROM items JOIN categories ON items.category_id = categories.id
