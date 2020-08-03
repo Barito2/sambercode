@@ -8,8 +8,8 @@ function tentukan_deret_geometri($arr)
 
     $ratio = $arr[1] / $arr[0];
 
-    for ($i = 1; $i < sizeof($arr); $i++) {
-        if (($arr[$i] / $arr[$i - 1] != $ratio)) {
+    for ($i = 1; $i < sizeof($arr) - 2; $i++) {
+        if (($arr[$i + 1] / $arr[$i] != $ratio)) {
             return "False<br>";
         }
     }

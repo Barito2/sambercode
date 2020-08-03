@@ -2,29 +2,30 @@
 
 function papan_catur($angka)
 {
-    // tulis kode di sini
-    $x = 1;
-    echo "<table align=center border=1 cellspacing=0>";
-    while ($x <= $angka) {
-        echo "<tr>";
-        $y = 1;
-        while ($y <= $angka) {
-            if (($x + $y) % 2 > 0)
-                echo "<td width=50 height=50  bgcolor=#000000>
-                </td>";
-            else
-                echo "<td width=50 height=50 bgcolor=#ffffff>
-                </td>";
-            $y++;
+    $output = '';
+    for ($i = 0; $i < $angka; $i++) {
+        $baris = '';
+        for ($j = 0; $j < $angka; $j++) {
+            if ($i % 2 == 0) {
+                # code...
+                $baris .= "# ";
+            } else {
+                if ($j == $angka - 1) {
+                    # code...
+                    $baris .= "";
+                } else {
+                    $baris .= "&nbsp#";
+                }
+            }
         }
-        echo "</tr>";
-        $x++;
+        $output .= "$baris<br>";
     }
-    echo "</table><br><br>";
+    return $output;
 }
 
 // TEST CASES
 echo papan_catur(4);
+echo "<br>";
 /*
 # # # #
  # # #
@@ -33,6 +34,7 @@ echo papan_catur(4);
  */
 
 echo papan_catur(8);
+echo "<br>";
 /* 
 # # # # # # # #
  # # # # # # # 
