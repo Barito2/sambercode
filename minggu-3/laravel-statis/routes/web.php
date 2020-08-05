@@ -11,10 +11,17 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+// Route::get('/register','registerController@index');
+// Route::post('/welcome','registerController@register');
+
 Route::get('/', function () {
-    return view('index');
+    return view('main');
 });
 
-Route::get('/register','registerController@index');
-Route::post('/welcome','registerController@register');
-
+Route::get('/data-tables', function () {
+    return view('data-tables');
+});
