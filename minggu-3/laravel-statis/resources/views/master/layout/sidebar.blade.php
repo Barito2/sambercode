@@ -42,6 +42,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{'/pertanyaans'}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Pertanyaan
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

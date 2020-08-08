@@ -25,3 +25,10 @@ Route::get('/', function () {
 Route::get('/data-tables', function () {
     return view('data-tables');
 });
+
+Route::get('/pertanyaans/create', 'pertanyaansControllers@create');
+Route::post('/pertanyaans', 'pertanyaansControllers@store');
+Route::get('/pertanyaans', 'pertanyaansControllers@index');
+Route::get('/pertanyaans/{id}/edit', 'pertanyaansControllers@edit');
+Route::put('/pertanyaans/{id}', 'pertanyaansControllers@update');
+Route::delete('/pertanyaans/{id}', 'pertanyaansControllers@destroy');

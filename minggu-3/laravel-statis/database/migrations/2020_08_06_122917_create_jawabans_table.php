@@ -15,10 +15,11 @@ class CreateJawabansTable extends Migration
     {
         Schema::create('jawabans', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->varchar('judul');
             $table->text('isi');
-            $table->date('tanggal_dibuat');
-            $table->date('tanggal_diperbarui');
-            $table->unsignedBigInteger('profile_id');
+            $table->date('tanggal_dibuat')->nullable();
+            $table->date('tanggal_diperbarui')->nullable();
+            $table->unsignedBigInteger('profile_id')->nullable();
             $table->foreign('profile_id')->references('id')->on('profils');
             $table->timestamps();
         });
