@@ -63,4 +63,11 @@ class pertanyaansControllers extends Controller
         DB::table('pertanyaans')->where('id', $id)->delete();
         return redirect('/pertanyaans')->with('success', 'Data berhasil di delete');
     }
+
+    public function show($id)
+    {
+        $data = DB::table('pertanyaans')->where('id', $id)->first();
+
+        return view('pertanyaans.detail', compact('data'));
+    }
 }
