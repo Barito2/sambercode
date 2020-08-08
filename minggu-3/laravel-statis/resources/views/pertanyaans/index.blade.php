@@ -28,7 +28,8 @@
                         <td>{{$data->judul}}</td>
                         <td>{{$data->isi}}</td>
                         <td style="display: flex">
-                            <a href="/pertanyaans/{{$data->id}}/edit" class="btn btn-sm btn-default">Edit</a>
+                            <a href="/pertanyaans/{{$data->id}}" class="btn btn-sm btn-info">Detail</a>
+                            <a href="/pertanyaans/{{$data->id}}/edit" class="btn btn-sm btn-warning">Edit</a>
                             <form action="/pertanyaans/{{$data->id}}" method="POST">
                                 @csrf
                                 @method('DELETE')

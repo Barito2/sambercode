@@ -32,3 +32,4 @@ Route::get('/pertanyaans', 'pertanyaansControllers@index');
 Route::get('/pertanyaans/{id}/edit', 'pertanyaansControllers@edit');
 Route::put('/pertanyaans/{id}', 'pertanyaansControllers@update');
 Route::delete('/pertanyaans/{id}', 'pertanyaansControllers@destroy');
+Route::get('/pertanyaans/{id}', 'pertanyaansControllers@show');
